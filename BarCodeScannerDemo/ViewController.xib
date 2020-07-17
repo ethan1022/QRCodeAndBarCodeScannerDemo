@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="BarCodeScannerDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLg-4X-ond">
+                    <rect key="frame" x="304" y="488.5" width="75" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="wOA-EG-rH1"/>
+                    </constraints>
+                    <state key="normal" title="Generate"/>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Input anything" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V05-bY-ezF">
+                    <rect key="frame" x="42" y="493" width="250" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="dK8-FF-FtT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRCodeImagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Qem-ZT-nAa">
+                    <rect key="frame" x="57" y="148" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Qem-ZT-nAa" secondAttribute="height" multiplier="1:1" id="WI5-ja-J8b"/>
+                        <constraint firstAttribute="width" constant="300" id="pFZ-gz-50f"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iG-cI-zD1">
+                    <rect key="frame" x="42" y="516" width="250" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Ycb-QA-iKR"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your QRCode will show here 👆🏼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6w-Dt-lm8">
+                    <rect key="frame" x="85.5" y="456" width="243" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLS-AH-I82">
+                    <rect key="frame" x="147" y="553" width="120" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="IEK-Ix-57L"/>
+                        <constraint firstAttribute="width" constant="120" id="ZFB-tO-yUL"/>
+                    </constraints>
+                    <state key="normal" title=" Scan"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="17"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Qem-ZT-nAa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7fo-au-DWk"/>
+                <constraint firstItem="6iG-cI-zD1" firstAttribute="width" secondItem="V05-bY-ezF" secondAttribute="width" id="88e-Eb-I5u"/>
+                <constraint firstItem="zLS-AH-I82" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AxK-gY-a9c"/>
+                <constraint firstItem="zLS-AH-I82" firstAttribute="top" secondItem="6iG-cI-zD1" secondAttribute="bottom" constant="36" id="Ec6-zk-QzL"/>
+                <constraint firstItem="vLg-4X-ond" firstAttribute="leading" secondItem="V05-bY-ezF" secondAttribute="trailing" constant="12" id="PwB-Wb-CvZ"/>
+                <constraint firstItem="6iG-cI-zD1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-40" id="Rxn-1M-C7N"/>
+                <constraint firstItem="V05-bY-ezF" firstAttribute="top" secondItem="Qem-ZT-nAa" secondAttribute="bottom" constant="45" id="WTj-AR-zRc"/>
+                <constraint firstItem="M6w-Dt-lm8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bKJ-sU-qyh"/>
+                <constraint firstItem="vLg-4X-ond" firstAttribute="centerY" secondItem="V05-bY-ezF" secondAttribute="centerY" id="h2y-5W-NNe"/>
+                <constraint firstItem="6iG-cI-zD1" firstAttribute="top" secondItem="V05-bY-ezF" secondAttribute="bottom" constant="2" id="hQK-Wm-OiV"/>
+                <constraint firstItem="Qem-ZT-nAa" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-150" id="ndT-Sk-mvS"/>
+                <constraint firstItem="M6w-Dt-lm8" firstAttribute="top" secondItem="Qem-ZT-nAa" secondAttribute="bottom" constant="8" id="q1a-pS-YJM"/>
+                <constraint firstItem="V05-bY-ezF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-40" id="stv-eO-pvV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="QRCodeImagePlaceholder" width="625" height="625"/>
+    </resources>
+</document>

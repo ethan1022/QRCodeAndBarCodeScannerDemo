@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		AADD254424C2113200236079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD254324C2113200236079 /* AppDelegate.swift */; };
 		AADD254624C2113200236079 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD254524C2113200236079 /* SceneDelegate.swift */; };
-		AADD254824C2113200236079 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD254724C2113200236079 /* ViewController.swift */; };
-		AADD254B24C2113200236079 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADD254924C2113200236079 /* Main.storyboard */; };
+		AADD254824C2113200236079 /* ScanViewBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD254724C2113200236079 /* ScanViewBaseController.swift */; };
 		AADD254D24C2113400236079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADD254C24C2113400236079 /* Assets.xcassets */; };
 		AADD255024C2113400236079 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADD254E24C2113400236079 /* LaunchScreen.storyboard */; };
+		AADD255924C2136100236079 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD255724C2136100236079 /* ScanViewController.swift */; };
+		AADD255E24C2176B00236079 /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AADD255C24C2176B00236079 /* ScanViewController.xib */; };
+		AADD256124C2186500236079 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD255F24C2186500236079 /* ViewController.swift */; };
+		AADD256224C2186500236079 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AADD256024C2186500236079 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AADD254024C2113200236079 /* BarCodeScannerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarCodeScannerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADD254324C2113200236079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AADD254524C2113200236079 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AADD254724C2113200236079 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AADD254A24C2113200236079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AADD254724C2113200236079 /* ScanViewBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewBaseController.swift; sourceTree = "<group>"; };
 		AADD254C24C2113400236079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AADD254F24C2113400236079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AADD255124C2113400236079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AADD255724C2136100236079 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		AADD255C24C2176B00236079 /* ScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
+		AADD255F24C2186500236079 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AADD256024C2186500236079 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,11 @@
 			children = (
 				AADD254324C2113200236079 /* AppDelegate.swift */,
 				AADD254524C2113200236079 /* SceneDelegate.swift */,
-				AADD254724C2113200236079 /* ViewController.swift */,
-				AADD254924C2113200236079 /* Main.storyboard */,
+				AADD255F24C2186500236079 /* ViewController.swift */,
+				AADD256024C2186500236079 /* ViewController.xib */,
+				AADD254724C2113200236079 /* ScanViewBaseController.swift */,
+				AADD255724C2136100236079 /* ScanViewController.swift */,
+				AADD255C24C2176B00236079 /* ScanViewController.xib */,
 				AADD254C24C2113400236079 /* Assets.xcassets */,
 				AADD254E24C2113400236079 /* LaunchScreen.storyboard */,
 				AADD255124C2113400236079 /* Info.plist */,
@@ -125,9 +134,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AADD256224C2186500236079 /* ViewController.xib in Resources */,
 				AADD255024C2113400236079 /* LaunchScreen.storyboard in Resources */,
 				AADD254D24C2113400236079 /* Assets.xcassets in Resources */,
-				AADD254B24C2113200236079 /* Main.storyboard in Resources */,
+				AADD255E24C2176B00236079 /* ScanViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +148,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AADD254824C2113200236079 /* ViewController.swift in Sources */,
+				AADD256124C2186500236079 /* ViewController.swift in Sources */,
+				AADD254824C2113200236079 /* ScanViewBaseController.swift in Sources */,
 				AADD254424C2113200236079 /* AppDelegate.swift in Sources */,
 				AADD254624C2113200236079 /* SceneDelegate.swift in Sources */,
+				AADD255924C2136100236079 /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AADD254924C2113200236079 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AADD254A24C2113200236079 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AADD254E24C2113400236079 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,6 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87N724V2PB;
 				INFOPLIST_FILE = BarCodeScannerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87N724V2PB;
 				INFOPLIST_FILE = BarCodeScannerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
