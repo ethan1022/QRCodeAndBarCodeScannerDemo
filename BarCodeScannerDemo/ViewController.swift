@@ -50,7 +50,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func longPressTriggered(_ gestureRecognizer: UILongPressGestureRecognizer) {
-        // 應該不會有沒有qrcode image的狀況，所以不另外處理
         guard let image = QRCodeImageView.image,
             image != UIImage(named: "QRCodeImagePlaceholder"),
             gestureRecognizer.state == .began else { return }
