@@ -45,8 +45,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func scanQRCode(_ sender: Any) {
-        let scanVC = ScanViewController(withScanType: .qrCode)
-        present(scanVC, animated: true, completion: nil)
+        let alert = UIAlertController(title: "Choose the type you want to scan",
+                                      message: nil, preferredStyle: .actionSheet)
+        let scanQRCode = UIAlertAction(title: "QRCode", style: .default) { (_) in
+            let scanVC = ScanViewController(withScanType: .qrCode)
+            let navController = UINavigationController(rootViewController: scanVC)
+            navController.modalPresentationStyle = .fullScreen
+            self.present(navController, animated: true, completion: nil)
+        }
+        
+        let scanBarCode =  UIAlertAction(title: "BarCode", style: .default) { (_) in
+            let scanVC = ScanViewController(withScanType: .barCode)
+            let navController = UINavigationController(rootViewController: scanVC)
+            navController.modalPresentationStyle = .fullScreen
+            self.present(navController, animated: true, completion: nil)
+        }
+        alert.addAction(scanQRCode)
+        alert.addAction(scanBarCode)
+        present(alert, animated: true, completion: nil)
     }
     
     @objc func longPressTriggered(_ gestureRecognizer: UILongPressGestureRecognizer) {
