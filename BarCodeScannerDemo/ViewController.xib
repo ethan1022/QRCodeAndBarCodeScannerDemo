@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="BarCodeScannerDemo" customModuleProvider="target">
             <connections>
+                <outlet property="QRCodeImageView" destination="Qem-ZT-nAa" id="68S-ut-srg"/>
+                <outlet property="textField" destination="V05-bY-ezF" id="HgQ-wB-0OT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,17 +20,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLg-4X-ond">
-                    <rect key="frame" x="304" y="488.5" width="75" height="30"/>
+                    <rect key="frame" x="304" y="493" width="75" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="75" id="wOA-EG-rH1"/>
                     </constraints>
                     <state key="normal" title="Generate"/>
+                    <connections>
+                        <action selector="generateQRCode:" destination="-1" eventType="touchUpInside" id="J9g-7k-ane"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Input anything" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V05-bY-ezF">
-                    <rect key="frame" x="42" y="493" width="250" height="21"/>
+                    <rect key="frame" x="42" y="493" width="250" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="dK8-FF-FtT"/>
+                        <constraint firstAttribute="height" constant="30" id="lw4-lT-Tc3"/>
                     </constraints>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -40,7 +47,7 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iG-cI-zD1">
-                    <rect key="frame" x="42" y="516" width="250" height="1"/>
+                    <rect key="frame" x="42" y="525" width="250" height="1"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Ycb-QA-iKR"/>
@@ -53,7 +60,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLS-AH-I82">
-                    <rect key="frame" x="147" y="553" width="120" height="30"/>
+                    <rect key="frame" x="147" y="562" width="120" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="IEK-Ix-57L"/>
                         <constraint firstAttribute="width" constant="120" id="ZFB-tO-yUL"/>
@@ -67,6 +74,9 @@
                             <integer key="value" value="17"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="scanQRCode:" destination="-1" eventType="touchUpInside" id="Vfw-JR-xMJ"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -90,6 +100,6 @@
         </view>
     </objects>
     <resources>
-        <image name="QRCodeImagePlaceholder" width="625" height="625"/>
+        <image name="QRCodeImagePlaceholder" width="312.5" height="312.5"/>
     </resources>
 </document>
