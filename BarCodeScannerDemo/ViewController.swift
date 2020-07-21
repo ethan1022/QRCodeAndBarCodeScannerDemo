@@ -11,14 +11,17 @@ import Photos
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var QRCodeImageView: UIImageView!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet private weak var QRCodeImageView: UIImageView!
+    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var scanButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         textField.delegate = self
         textField.becomeFirstResponder()
+        
+        scanButton.layer.borderColor = UIColor.link.cgColor
         
         // Configure QRCode image
         QRCodeImageView.isUserInteractionEnabled = true

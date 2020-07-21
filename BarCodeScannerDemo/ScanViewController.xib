@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanViewController" customModule="BarCodeScannerDemo" customModuleProvider="target">
             <connections>
+                <outlet property="keepScanButton" destination="W0f-9L-DbT" id="tEs-qe-oxe"/>
+                <outlet property="textView" destination="uBS-dp-pGD" id="6MF-0Q-OVg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,7 +18,45 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGL-OW-JrA">
+                    <rect key="frame" x="0.0" y="646" width="414" height="250"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The result of scan will show here!!" translatesAutoresizingMaskIntoConstraints="NO" id="uBS-dp-pGD">
+                            <rect key="frame" x="12" y="10" width="296" height="190"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0f-9L-DbT">
+                            <rect key="frame" x="320" y="108.5" width="82" height="33"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Keep Scan"/>
+                            <connections>
+                                <action selector="tapKeepScan:" destination="-1" eventType="touchUpInside" id="4xu-XF-y28"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="uBS-dp-pGD" firstAttribute="top" secondItem="sGL-OW-JrA" secondAttribute="top" constant="10" id="2CP-fE-oKm"/>
+                        <constraint firstItem="uBS-dp-pGD" firstAttribute="leading" secondItem="sGL-OW-JrA" secondAttribute="leading" constant="12" id="9WW-O8-eLO"/>
+                        <constraint firstAttribute="bottom" secondItem="uBS-dp-pGD" secondAttribute="bottom" constant="50" id="Dmk-gt-pWd"/>
+                        <constraint firstItem="W0f-9L-DbT" firstAttribute="centerY" secondItem="sGL-OW-JrA" secondAttribute="centerY" id="N9i-uR-nfS"/>
+                        <constraint firstItem="W0f-9L-DbT" firstAttribute="leading" secondItem="uBS-dp-pGD" secondAttribute="trailing" constant="12" id="VXk-zL-dze"/>
+                        <constraint firstAttribute="height" constant="250" id="m2v-Eo-stp"/>
+                        <constraint firstAttribute="trailing" secondItem="W0f-9L-DbT" secondAttribute="trailing" constant="12" id="oHY-Nf-8go"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sGL-OW-JrA" secondAttribute="bottom" id="1sk-T7-1IO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sGL-OW-JrA" secondAttribute="trailing" id="A87-GH-raY"/>
+                <constraint firstItem="sGL-OW-JrA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tou-BO-TOO"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="154"/>
         </view>

@@ -11,6 +11,9 @@ import AVFoundation
 
 class ScanViewController: ScanViewBaseController, ScanViewBaseControllerDelegate {
     
+    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet private weak var keepScanButton: UIButton!
+    
     var scanType: ScanType
     
     init(withScanType scanType: ScanType) {
@@ -25,11 +28,25 @@ class ScanViewController: ScanViewBaseController, ScanViewBaseControllerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        keepScanButton.isEnabled = false
+        
+        let dismissButton = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(dissmissVC))
+        navigationItem.leftBarButtonItem = dismissButton
     }
     
     func metadataOutput(_ output: AVMetadataMachineReadableCodeObject) {
         guard let resultStringValue = output.stringValue else { return }
-        print(resultStringValue)
+        textView.text = resultStringValue
+        keepScanButton.isEnabled.toggle()
     }
 
+    @IBAction func tapKeepScan(_ sender: Any) {
+        captureSessionStartRunning()
+        keepScanButton.isEnabled.toggle()
+        textView.text = "The result of scan will show here!!"
+    }
+    
+    @objc func dissmissVC() {
+        dismiss(animated: true, completion: nil)
+    }
 }

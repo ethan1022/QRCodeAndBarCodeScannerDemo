@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="BarCodeScannerDemo" customModuleProvider="target">
             <connections>
                 <outlet property="QRCodeImageView" destination="Qem-ZT-nAa" id="68S-ut-srg"/>
+                <outlet property="scanButton" destination="zLS-AH-I82" id="drG-aP-mqe"/>
                 <outlet property="textField" destination="V05-bY-ezF" id="HgQ-wB-0OT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -71,7 +72,7 @@
                             <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <integer key="value" value="17"/>
+                            <integer key="value" value="12"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
