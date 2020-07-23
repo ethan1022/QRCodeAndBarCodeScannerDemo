@@ -98,8 +98,8 @@ class ScanViewController: ScanViewBaseController, ScanViewBaseControllerDelegate
         switch mode {
         case .structuredAppend:
             isScanSplitQRCode = true
-            let currentPosition = binary.next(bits: modeBitsLength) + 1 // current index of the scanned QR code
-            let totalCount = binary.next(bits: modeBitsLength) + 1 // total QRCodes need to scan
+            let currentPosition = binary.next(bits: modeBitsLength) + 1 // current index of the QR code you scanned
+            let totalCount = binary.next(bits: modeBitsLength) + 1 // total QRCodes you need to scan
             let parity = binary.next(bits: modeBitsLength * 2) // QRCode ID
             parseResult(resultString, currentPosition: currentPosition, totalCount: totalCount, parity: NSNumber(value: parity))
         case .byte:
